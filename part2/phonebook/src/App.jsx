@@ -50,7 +50,7 @@ const App = () => {
 
           setNewName("")
           setNewNumber("")
-        })
+        }, [])
 
     } else {
       // alert(`${newName} already exists in the phonebook!`)
@@ -72,7 +72,7 @@ const App = () => {
 
           setNewName("")
           setNewNumber("")
-        })
+        }, [])
         .catch(error => {
           console.log(`${person.name} does not exist anymore! fail!`)
           setAlertType("bad")
@@ -95,7 +95,7 @@ const App = () => {
       .del(id)
       .then(newPersons => {
         setPersons(persons.filter(n => n.id !== id))
-      })
+      }, [])
     } else {
       console.log(`${person.name} was not deleted`)
     }

@@ -17,7 +17,7 @@ const Country = ({country}) => {
                 )}
             </ul>
             <img src={country.flags.png} alt="flag of country"/>
-            <Weather/>
+            <Weather country={country}/>
         </div>
     )
 }

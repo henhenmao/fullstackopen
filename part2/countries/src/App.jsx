@@ -18,7 +18,7 @@ function App() {
         .getAll()
         .then(countries => {
             setCountries(countries)
-        })
+        }, [])
     })
     if (!allCountries) {
         return null
@@ -27,7 +27,7 @@ function App() {
 
     const showCountry = (name) => {
         setShownCountry(searchedCountries.find(n => n.name.common === name))
-        console.log(shownCountry)
+        // console.log(shownCountry)
     }
 
     // handling changes to the searchbar
