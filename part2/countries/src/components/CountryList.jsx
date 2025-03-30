@@ -1,14 +1,14 @@
 
+import CountryItem from "./CountryItem"
 
 
-const CountryList = ({countries}) => {
+const CountryList = ({countries, showCountry}) => {
+    // console.log("hgello")
+    // console.log(countries)
     return (
         <ul>
             {countries.map(country => 
-                <li key={country.name.common}>
-                    {country.name.common}
-                    
-                </li>
+                <CountryItem key={country.name.common} country={country} showCountry={() => showCountry(country.name.common)}/>
             )}
         </ul>
     )

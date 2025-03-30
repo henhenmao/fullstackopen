@@ -1,12 +1,23 @@
 
+import {useState} from "react"
 
 
 import Country from './Country'
 import CountryList from './CountryList'
 
-const Status = ({searchedCountries}) => {
+const Status = ({searchedCountries, showCountry, shownCountry}) => {
 
-    const size = searchedCountries.length
+    const size = searchedCountries.length // display only
+
+    if (shownCountry) {
+        return (
+            <div>
+                {searchedCountries.length}
+                <br/>
+                <Country country={shownCountry}/>
+            </div>
+        )
+    }
 
     if (size === 0) {
         return (
@@ -14,6 +25,16 @@ const Status = ({searchedCountries}) => {
                 {searchedCountries.length}
                 <br/>
                 no matches
+            </div>
+        )
+    }
+
+    if (size === 1) {
+        return (
+            <div>
+                {searchedCountries.length}
+                <br/>
+                <Country country={searchedCountries[0]}/>
             </div>
         )
     }
@@ -33,20 +54,12 @@ const Status = ({searchedCountries}) => {
             <div>
                 {searchedCountries.length}
                 <br/>
-                <CountryList countries={searchedCountries}/>
+                <CountryList countries={searchedCountries} showCountry={showCountry}/>
             </div>
         )
     }
 
-    if (size === 1) {
-        return (
-            <div>
-                {searchedCountries.length}
-                <br/>
-                <Country country={searchedCountries[0]}/>
-            </div>
-        )
-    }
+
 
     return (
         <div>
