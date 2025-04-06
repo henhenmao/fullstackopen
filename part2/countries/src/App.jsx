@@ -50,8 +50,10 @@ function App() {
     // status depends on how many countries have been filtered
     // displays countries based on the status of the search
     return (
-        <div>
-            <Search search={search} handleSearchChange={handleSearchChange}/>
+        <div className="body">
+            <div className="search">
+                <Search search={search} handleSearchChange={handleSearchChange}/>
+            </div>
             <Status searchedCountries={searchedCountries} showCountry={showCountry} shownCountry={shownCountry}/>
         </div>
     )

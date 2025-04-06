@@ -1,5 +1,39 @@
 
 
+/*
+maybe make the website look nicer at some point in your life
+add a cool background (maybe make it a live background)
+make a cool dropdown click lke google searchbar instead of a list of buttons
+just make it look nice yuh
+*/
+
+
+
+.body {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.search {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+}
+
+.header {
+    font-size: 50px;    
+}
+
+.searchbar {
+    width: 60%;
+}
 
 .countryItem {
     display: flex;

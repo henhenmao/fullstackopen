@@ -2,9 +2,9 @@
 
 const Search = ({search, handleSearchChange}) => {
     return (
-        <div>
-            <h1>Countries Search</h1>
-            find countries <input value={search} onChange={handleSearchChange}/>
+        <div class="search">
+            <h1 className="header">Countries Search</h1>
+            <input class="searchbar" value={search} onChange={handleSearchChange}/>
         </div>
     )
 }
